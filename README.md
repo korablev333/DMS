@@ -60,6 +60,11 @@ npm run dev
 
 ---
 
+## 🚀 Быстрая установка на Raspberry Pi / Linux
+
+```bash
+curl -s https://raw.githubusercontent.com/korablev333/DMS/main/install_dms.sh | bash
+
 ## 🧑‍💻 Автор
 
 Разработчик: [@korablev333](https://github.com/korablev333)  
