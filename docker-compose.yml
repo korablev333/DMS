@@ -1,8 +1,21 @@
 version: '3.8'
+
 services:
   smart-home-ui:
     build: .
     container_name: smart_home_ui
     ports:
-      - "8080:80"
+      - "80:80"
+    restart: unless-stopped
+    depends_on:
+      - mosquitto
+
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: mqtt_broker
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
     restart: unless-stopped
