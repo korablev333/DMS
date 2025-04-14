@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  smart-home-ui:
+    build: .
+    container_name: smart_home_ui
+    ports:
+      - "8080:80"
+    restart: unless-stopped
